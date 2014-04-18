@@ -1,0 +1,40 @@
+{
+  "name": "latest-version",
+  "version": "0.0.0",
+  "description": "Get the latest version of a npm package",
+  "license": "MIT",
+  "repository": "sindresorhus/latest-version",
+  "bin": {
+    "latest-version": "cli.js"
+  },
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "latest",
+    "version",
+    "npm",
+    "package",
+    "package.json",
+    "current",
+    "module"
+  ],
+  "dependencies": {
+    "got": "^0.2.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
