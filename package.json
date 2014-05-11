@@ -32,7 +32,7 @@
     "module"
   ],
   "dependencies": {
-    "got": "^0.2.0"
+    "got": "^0.3.0"
   },
   "devDependencies": {
     "mocha": "*"
