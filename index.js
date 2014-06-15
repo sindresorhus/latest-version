@@ -1,17 +1,13 @@
 'use strict';
-var got = require('got');
-var endpoint = 'https://registry.npmjs.org/';
+var packageJson = require('package-json');
 
 module.exports = function (name, cb) {
-	got(endpoint + encodeURIComponent(name) + '/latest', function (err, data) {
-		if (err === 404) {
-			return cb(new Error('Package doesn\'t exist'));
-		}
-
+	packageJson(name, 'latest', function (err, json) {
 		if (err) {
-			return cb(err);
+			cb(err);
+			return;
 		}
 
-		cb(null, JSON.parse(data).version);
+		cb(null, json.version);
 	});
 };
