@@ -4,13 +4,13 @@
   "description": "Get the latest version of a npm package",
   "license": "MIT",
   "repository": "sindresorhus/latest-version",
-  "bin": {
-    "latest-version": "cli.js"
-  },
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
     "url": "http://sindresorhus.com"
+  },
+  "bin": {
+    "latest-version": "cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -32,7 +32,7 @@
     "module"
   ],
   "dependencies": {
-    "package-json": "^0.2.0"
+    "package-json": "^1.0.0"
   },
   "devDependencies": {
     "mocha": "*"

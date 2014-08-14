@@ -33,11 +33,12 @@ $ npm install --global latest-version
 ```sh
 $ latest-version --help
 
-Usage
-  $ latest-version <package-name>
+  Usage
+    latest-version <package-name>
 
-Example
-  $ latest-version pageres
+  Example
+    latest-version pageres
+    0.4.1ersion pageres
   0.2.3
 ```
 
