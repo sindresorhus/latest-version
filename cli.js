@@ -1,39 +1,28 @@
 #!/usr/bin/env node
 'use strict';
-var pkg = require('./package.json');
+var meow = require('meow');
 var latestVersion = require('./');
-var argv = process.argv.slice(2);
-var input = argv[0];
 
-function help() {
-	console.log([
+var cli = meow({
+	help: [
+		'Usage',
+		'  $ latest-version <package-name>',
 		'',
-		'  ' + pkg.description,
-		'',
-		'  Usage',
-		'    latest-version <package-name>',
-		'',
-		'  Example',
-		'    latest-version pageres',
-		'    0.4.1'
-	].join('\n'));
+		'Example',
+		'  $ latest-version pageres',
+		'  0.4.1'
+	]
+});
+
+if (cli.input.length === 0) {
+	console.error('Expected a package name');
+	process.exit(1);
 }
 
-if (!input || argv.indexOf('--help') !== -1) {
-	help();
-	return;
-}
-
-if (argv.indexOf('--version') !== -1) {
-	console.log(pkg.version);
-	return;
-}
-
-latestVersion(input, function (err, version) {
+latestVersion(cli.input[0], function (err, version) {
 	if (err) {
 		console.error(err);
 		process.exit(1);
-		return;
 	}
 
 	console.log(version);

@@ -30,6 +30,7 @@
     "module"
   ],
   "dependencies": {
+    "meow": "^3.3.0",
     "package-json": "^1.0.0"
   },
   "devDependencies": {
