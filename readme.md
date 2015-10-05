@@ -7,7 +7,7 @@ Fetches the version directly from the registry instead of depending on the massi
 
 ## Install
 
-```sh
+```
 $ npm install --save latest-version
 ```
 
@@ -15,22 +15,22 @@ $ npm install --save latest-version
 ## Usage
 
 ```js
-var latestVersion = require('latest-version');
+const latestVersion = require('latest-version');
 
-latestVersion('pageres', function (err, version) {
+latestVersion('pageres', (err, version) => {
 	console.log(version);
-	//=> 0.2.3
+	//=> '0.2.3'
 });
 ```
 
 
 ## CLI
 
-```sh
+```
 $ npm install --global latest-version
 ```
 
-```sh
+```
 $ latest-version --help
 
   Usage
