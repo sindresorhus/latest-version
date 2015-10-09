@@ -17,9 +17,14 @@ $ npm install --save latest-version
 ```js
 const latestVersion = require('latest-version');
 
-latestVersion('pageres', (err, version) => {
+latestVersion('ava').then(version => {
 	console.log(version);
-	//=> '0.2.3'
+	//=> '0.2.0'
+});
+
+latestVersion('@sindresorhus/df').then(version => {
+	console.log(version);
+	//=> '1.0.1'
 });
 ```
 

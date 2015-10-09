@@ -1,11 +1,12 @@
-'use strict';
-var assert = require('assert');
-var latestVersion = require('./');
+import test from 'ava';
+import fn from './';
 
-it('should get the latest version of a package', function (cb) {
-	latestVersion('pageres', function (err, version) {
-		assert(!err, err);
-		assert(version);
-		cb();
-	});
+const reVersion = /\d+\.\d+\.\d+/;
+
+test('latest version', async t => {
+	t.regexTest(reVersion, await fn('ava'));
+});
+
+test('latest version scoped', async t => {
+	t.regexTest(reVersion, await fn('@sindresorhus/df'));
 });
