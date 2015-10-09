@@ -9,7 +9,6 @@
     "email": "sindresorhus@gmail.com",
     "url": "sindresorhus.com"
   },
-  "bin": "cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
@@ -17,20 +16,19 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js",
-    "cli.js"
+    "index.js"
   ],
   "keywords": [
     "latest",
     "version",
     "npm",
+    "pkg",
     "package",
     "package.json",
     "current",
     "module"
   ],
   "dependencies": {
-    "meow": "^3.3.0",
     "package-json": "^2.0.0"
   },
   "devDependencies": {

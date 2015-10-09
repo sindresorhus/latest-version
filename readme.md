@@ -29,22 +29,10 @@ latestVersion('@sindresorhus/df').then(version => {
 ```
 
 
-## CLI
+## Related
 
-```
-$ npm install --global latest-version
-```
-
-```
-$ latest-version --help
-
-  Usage
-    $ latest-version <package-name>
-
-  Example
-    $ latest-version pageres
-    0.4.1
-```
+- [latest-version-cli](https://github.com/sindresorhus/latest-version-cli) - CLI for this module
+- [package-json](https://github.com/sindresorhus/package-json) - Get the package.json of a package from the npm registry
 
 
 ## License
