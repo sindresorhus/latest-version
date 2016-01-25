@@ -1,7 +1,7 @@
 {
   "name": "latest-version",
   "version": "2.0.0",
-  "description": "Get the latest version of a npm package",
+  "description": "Get the latest version of an npm package",
   "license": "MIT",
   "repository": "sindresorhus/latest-version",
   "author": {
