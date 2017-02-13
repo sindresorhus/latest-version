@@ -19,7 +19,7 @@ const latestVersion = require('latest-version');
 
 latestVersion('ava').then(version => {
 	console.log(version);
-	//=> '0.2.0'
+	//=> '0.18.0'
 });
 
 latestVersion('@sindresorhus/df').then(version => {
@@ -37,4 +37,4 @@ latestVersion('@sindresorhus/df').then(version => {
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

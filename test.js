@@ -1,12 +1,11 @@
 import test from 'ava';
-import m from './';
-
-const reVersion = /\d+\.\d+\.\d+/;
+import semverRegex from 'semver-regex';
+import m from '.';
 
 test('latest version', async t => {
-	t.regex(await m('ava'), reVersion);
+	t.regex(await m('ava'), semverRegex());
 });
 
 test('latest version scoped', async t => {
-	t.regex(await m('@sindresorhus/df'), reVersion);
+	t.regex(await m('@sindresorhus/df'), semverRegex());
 });
