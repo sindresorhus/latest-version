@@ -26,6 +26,11 @@ latestVersion('@sindresorhus/df').then(version => {
 	console.log(version);
 	//=> '1.0.1'
 });
+
+latestVersion('npm', 'latest-5').then(version => {
+	console.log(version);
+	//=> '5.5.1'
+});
 ```
 
 
