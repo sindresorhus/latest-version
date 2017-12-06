@@ -8,11 +8,11 @@ test('latest version', async t => {
 });
 
 test('latest version with version', async t => {
-	t.true(semver.satisfies(await m('package-json', '0'), '0.x'));
+	t.true(semver.satisfies(await m('package-json', {version: '0'}), '0.x'));
 });
 
 test('latest version with dist-tag', async t => {
-	t.true(semver.satisfies(await m('npm', 'latest-5'), '5.x'));
+	t.true(semver.satisfies(await m('npm', {version: 'latest-5'}), '5.x'));
 });
 
 test('latest version scoped', async t => {
