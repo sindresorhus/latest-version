@@ -26,6 +26,12 @@ latestVersion('@sindresorhus/df').then(version => {
 	console.log(version);
 	//=> '1.0.1'
 });
+
+// Also works with dist-tags and semver ranges
+latestVersion('npm', {version: 'latest-5'}).then(version => {
+	console.log(version);
+	//=> '5.5.1'
+});
 ```
 
 

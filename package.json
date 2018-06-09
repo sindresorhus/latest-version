@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "ava": "*",
+    "semver": "^5.4.1",
     "semver-regex": "^1.0.0",
     "xo": "*"
   }
