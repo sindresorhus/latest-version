@@ -8,7 +8,7 @@ Fetches the version directly from the registry instead of depending on the massi
 ## Install
 
 ```
-$ npm install --save latest-version
+$ npm install latest-version
 ```
 
 
@@ -17,21 +17,17 @@ $ npm install --save latest-version
 ```js
 const latestVersion = require('latest-version');
 
-latestVersion('ava').then(version => {
-	console.log(version);
+(async () => {
+	console.log(await latestVersion('ava'));
 	//=> '0.18.0'
-});
 
-latestVersion('@sindresorhus/df').then(version => {
-	console.log(version);
+	console.log(await latestVersion('@sindresorhus/df'));
 	//=> '1.0.1'
-});
 
-// Also works with dist-tags and semver ranges
-latestVersion('npm', {version: 'latest-5'}).then(version => {
-	console.log(version);
+	// Also works with dist-tags and semver ranges
+	console.log(await latestVersion('npm', {version: 'latest-5'}));
 	//=> '5.5.1'
-});
+})();
 ```
 
 
