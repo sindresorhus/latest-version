@@ -1,16 +1,14 @@
 export interface Options {
 	/**
-	 * A dist-tag or a semver range.
+	 * A semver range or [dist-tag](https://docs.npmjs.com/cli/dist-tag).
 	 */
 	readonly version?: string;
 }
 
 /**
  * Get the latest version of an npm package.
- *
- * @param name - The package name to look up the version for.
  */
 export default function latestVersion(
-	name: string,
+	packageName: string,
 	options?: Options
 ): Promise<string>;

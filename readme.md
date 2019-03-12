@@ -24,7 +24,7 @@ const latestVersion = require('latest-version');
 	console.log(await latestVersion('@sindresorhus/df'));
 	//=> '1.0.1'
 
-	// Also works with dist-tags and semver ranges
+	// Also works with semver ranges and dist-tags
 	console.log(await latestVersion('npm', {version: 'latest-5'}));
 	//=> '5.5.1'
 })();
