@@ -7,4 +7,5 @@ const lastestVersion = async (packageName, options) => {
 };
 
 module.exports = lastestVersion;
+// TODO: Remove this for the next major release
 module.exports.default = lastestVersion;
