@@ -1,6 +1,6 @@
 {
 	"name": "latest-version",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "Get the latest version of an npm package",
 	"license": "MIT",
 	"repository": "sindresorhus/latest-version",
