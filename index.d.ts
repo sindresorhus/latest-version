@@ -1,9 +1,26 @@
+/// <reference types="node"/>
+import {Agent as HttpAgent} from 'http';
+import {Agent as HttpsAgent} from 'https';
+
 declare namespace latestVersion {
+	interface Agents {
+		http?: HttpAgent;
+		https?: HttpsAgent;
+	}
+
 	interface Options {
 		/**
 		A semver range or [dist-tag](https://docs.npmjs.com/cli/dist-tag).
 		*/
 		readonly version?: string;
+		/**
+		The registry URL is by default inferred from the npm defaults and `.npmrc`. This is beneficial as `package-json` and any project using it will work just like npm. This option is*only** intended for internal tools. You should*not** use this option in reusable packages. Prefer just using `.npmrc` whenever possible.
+		*/
+		readonly registryUrl?: string;
+		/**
+		Overwrite the `agent` option that is passed down to [`got`](https://github.com/sindresorhus/got#agent). This might be useful to add [proxy support](https://github.com/sindresorhus/got#proxies).
+		*/
+		readonly agent?: HttpAgent | HttpsAgent | Agents | false;
 	}
 }
 
