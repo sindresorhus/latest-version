@@ -1,4 +1,4 @@
-# latest-version [![Build Status](https://travis-ci.org/sindresorhus/latest-version.svg?branch=master)](https://travis-ci.org/sindresorhus/latest-version)
+# latest-version
 
 > Get the latest version of an npm package
 
