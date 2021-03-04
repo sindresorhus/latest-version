@@ -2,7 +2,11 @@
 const packageJson = require('package-json');
 
 const latestVersion = async (packageName, options) => {
-	const {version} = await packageJson(packageName.toLowerCase(), options);
+	if (!options || options.normalizeName) {
+		packageName = packageName.toLowerCase();
+	}
+
+	const {version} = await packageJson(packageName, options);
 	return version;
 };
 
