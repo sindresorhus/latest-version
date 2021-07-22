@@ -1,7 +1,7 @@
 import test from 'ava';
 import semver from 'semver';
 import semverRegex from 'semver-regex';
-import latestVersion from '.';
+import latestVersion from './index.js';
 
 test('latest version', async t => {
 	t.regex(await latestVersion('ava'), semverRegex());

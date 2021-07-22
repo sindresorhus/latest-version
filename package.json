@@ -4,13 +4,16 @@
 	"description": "Get the latest version of an npm package",
 	"license": "MIT",
 	"repository": "sindresorhus/latest-version",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": ">=12.20"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -30,13 +33,13 @@
 		"module"
 	],
 	"dependencies": {
-		"package-json": "^6.3.0"
+		"package-json": "^7.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"semver": "^6.0.0",
-		"semver-regex": "^2.0.0",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^3.15.0",
+		"semver": "^7.3.5",
+		"semver-regex": "^4.0.0",
+		"tsd": "^0.17.0",
+		"xo": "^0.42.0"
 	}
 }
