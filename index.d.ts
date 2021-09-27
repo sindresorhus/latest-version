@@ -1,9 +1,4 @@
-export interface Options {
-	/**
-	A semver range or [dist-tag](https://docs.npmjs.com/cli/dist-tag).
-	*/
-	readonly version?: string;
-}
+import type { Options } from 'package-json';
 
 /**
 Get the latest version of an npm package.
