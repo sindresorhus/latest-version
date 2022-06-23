@@ -6,8 +6,8 @@ Fetches the version directly from the registry instead of depending on the massi
 
 ## Install
 
-```
-$ npm install latest-version
+```sh
+npm install latest-version
 ```
 
 ## Usage
