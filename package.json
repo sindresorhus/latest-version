@@ -33,7 +33,7 @@
 		"module"
 	],
 	"dependencies": {
-		"package-json": "^7.0.0"
+		"package-json": "^8.1.0"
 	},
 	"devDependencies": {
 		"ava": "^3.15.0",
