@@ -37,13 +37,13 @@
 		"module"
 	],
 	"dependencies": {
-		"package-json": "^9.0.0"
+		"package-json": "^10.0.0"
 	},
 	"devDependencies": {
-		"ava": "^6.1.0",
-		"semver": "^7.5.4",
+		"ava": "^6.1.1",
+		"semver": "^7.6.0",
 		"semver-regex": "^4.0.5",
-		"tsd": "^0.30.4",
-		"xo": "^0.56.0"
+		"tsd": "^0.30.7",
+		"xo": "^0.57.0"
 	}
 }

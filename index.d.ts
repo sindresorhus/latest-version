@@ -1,9 +1,7 @@
-export type Options = {
-	/**
-	A semver range or [dist-tag](https://docs.npmjs.com/cli/dist-tag).
-	*/
-	readonly version?: string;
-};
+import type {Options as PackageJsonOptions} from 'package-json';
+
+// TODO: descriptions say some package-json specific things
+export type Options = Pick<PackageJsonOptions, 'version' | 'registryUrl' | 'omitDeprecated'>;
 
 /**
 Get the latest version of an npm package.
@@ -13,14 +11,14 @@ Get the latest version of an npm package.
 import latestVersion from 'latest-version';
 
 console.log(await latestVersion('ava'));
-//=> '0.18.0'
+//=> '6.1.1'
 
 console.log(await latestVersion('@sindresorhus/df'));
-//=> '1.0.1'
+//=> '4.0.0'
 
 // Also works with semver ranges and dist-tags
 console.log(await latestVersion('npm', {version: 'latest-5'}));
-//=> '5.5.1'
+//=> '5.10.0'
 ```
 */
 export default function latestVersion(packageName: string, options?: Options): Promise<string>;

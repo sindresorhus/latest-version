@@ -18,3 +18,20 @@ test('latest version with dist-tag', async t => {
 test('latest version scoped', async t => {
 	t.regex(await latestVersion('@sindresorhus/df'), semverRegex());
 });
+
+test('registry url', async t => {
+	t.regex(await latestVersion('npm', {registryUrl: 'https://registry.yarnpkg.com/'}), semverRegex());
+});
+
+test('include deprecated', async t => {
+	t.regex(await latestVersion('querystring', {version: '0.2', omitDeprecated: false}), semverRegex());
+});
+
+// TODO: should we expose package-json errors?
+test('throws if not found', async t => {
+	const packageError = await t.throwsAsync(latestVersion('nnnope'));
+	t.is(packageError.name, 'PackageNotFoundError');
+
+	const versionError = await t.throwsAsync(latestVersion('npm', {version: '0.0.0'}));
+	t.is(versionError.name, 'VersionNotFoundError');
+});

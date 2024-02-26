@@ -16,14 +16,14 @@ npm install latest-version
 import latestVersion from 'latest-version';
 
 console.log(await latestVersion('ava'));
-//=> '0.18.0'
+//=> '6.1.1'
 
 console.log(await latestVersion('@sindresorhus/df'));
-//=> '1.0.1'
+//=> '4.0.0'
 
 // Also works with semver ranges and dist-tags
 console.log(await latestVersion('npm', {version: 'latest-5'}));
-//=> '5.5.1'
+//=> '5.10.0'
 ```
 
 ## Related
