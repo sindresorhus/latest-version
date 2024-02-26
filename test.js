@@ -1,7 +1,7 @@
 import test from 'ava';
 import semver from 'semver';
 import semverRegex from 'semver-regex';
-import latestVersion from './index.js';
+import latestVersion, {PackageNotFoundError, VersionNotFoundError} from './index.js';
 
 test('latest version', async t => {
 	t.regex(await latestVersion('ava'), semverRegex());
@@ -27,11 +27,7 @@ test('include deprecated', async t => {
 	t.regex(await latestVersion('querystring', {version: '0.2', omitDeprecated: false}), semverRegex());
 });
 
-// TODO: should we expose package-json errors?
 test('throws if not found', async t => {
-	const packageError = await t.throwsAsync(latestVersion('nnnope'));
-	t.is(packageError.name, 'PackageNotFoundError');
-
-	const versionError = await t.throwsAsync(latestVersion('npm', {version: '0.0.0'}));
-	t.is(versionError.name, 'VersionNotFoundError');
+	await t.throwsAsync(latestVersion('nnnope'), {instanceOf: PackageNotFoundError});
+	await t.throwsAsync(latestVersion('npm', {version: '0.0.0'}), {instanceOf: VersionNotFoundError});
 });

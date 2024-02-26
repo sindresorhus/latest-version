@@ -26,6 +26,8 @@ console.log(await latestVersion('npm', {version: 'latest-5'}));
 //=> '5.10.0'
 ```
 
+This package exposes the [`version`](https://github.com/sindresorhus/package-json#version), [`registryUrl`](https://github.com/sindresorhus/package-json#registryurl), and [`omitDeprecated`](https://github.com/sindresorhus/package-json#omitdeprecated) options from [`package-json`](https://github.com/sindresorhus/package-json#options), as well as the [`PackageNotFoundError`](https://github.com/sindresorhus/package-json#packagenotfounderror) and [`VersionNotFoundError`](https://github.com/sindresorhus/package-json#versionnotfounderror) errors.
+
 ## Related
 
 - [latest-version-cli](https://github.com/sindresorhus/latest-version-cli) - CLI for this module

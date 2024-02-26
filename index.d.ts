@@ -1,6 +1,7 @@
 import type {Options as PackageJsonOptions} from 'package-json';
 
-// TODO: descriptions say some package-json specific things
+export {PackageNotFoundError, VersionNotFoundError} from 'package-json';
+
 export type Options = Pick<PackageJsonOptions, 'version' | 'registryUrl' | 'omitDeprecated'>;
 
 /**
